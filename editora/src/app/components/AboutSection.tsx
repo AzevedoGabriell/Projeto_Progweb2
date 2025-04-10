@@ -19,7 +19,7 @@ export default function AboutSection() {
           </div>
           <div className="about-image">
             <Image
-              src="/images/about-office.jpg"
+              src='/images/equipes.jpeg'
               alt="Escritório da Compselects"
               fill
             />

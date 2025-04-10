@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -8,10 +9,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Image 
-              src="/assets/images/logo-compselects-white.png" 
+              src="/images/logo.png" 
               alt="Compselects Logo" 
               width={180}
-              height={60}
+              height={180}
             />
             <p className="mt-4 text-gray-400">
               30 anos publicando excelência em computação
@@ -32,9 +33,9 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <address className="not-italic text-gray-400">
               <p>Rua da Computação, 123</p>
-              <p>São Paulo, SP</p>
+              <p>Campina Grande, PB</p>
               <p className="mt-2">contato@compselects.com.br</p>
-              <p>(11) 1234-5678</p>
+              <p>(83) 99999-9999</p>
             </address>
           </div>
 
@@ -55,12 +56,20 @@ export default function Footer() {
                 Assinar
               </button>
             </form>
-            <div className="flex space-x-4 mt-4">
-              <SocialIcon platform="facebook" />
-              <SocialIcon platform="twitter" />
-              <SocialIcon platform="linkedin" />
-              <SocialIcon platform="instagram" />
-            </div>
+              <div className="flex flex-row items-center gap-8 pt-12">
+                <a href="https://facebook.com/seulink" aria-label="Facebook">
+                  <Facebook size={24} className="text-gray-300 hover:text-blue-500" />
+                </a>
+                <a href="https://twitter.com/seulink" aria-label="Twitter">
+                  <Twitter size={24} className="text-gray-300 hover:text-blue-400" />
+                </a>
+                <a href="https://linkedin.com/in/seulink" aria-label="LinkedIn">
+                  <Linkedin size={24} className="text-gray-300 hover:text-blue-600" />
+                </a>
+                <a href="https://instagram.com/seulink" aria-label="Instagram">
+                  <Instagram size={24} className="text-gray-300 hover:text-pink-500" />
+                </a>
+              </div>
           </div>
         </div>
 

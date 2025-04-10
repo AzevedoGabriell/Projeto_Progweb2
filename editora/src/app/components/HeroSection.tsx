@@ -24,7 +24,7 @@ export default function HeroSection() {
       </div>
       <div className="hero-image">
         <Image
-          src="/images/hero-books.png"
+          src="/images/escolher-editora-de-livros-academicos.png"
           alt="Livros de computação"
           fill
           priority

@@ -25,7 +25,7 @@ a {
   padding: 0 20px;
 }
 
-/* Header - Novo estilo melhorado */
+/* Header - Estilo melhorado */
 header {
   width: 100%;
   background: linear-gradient(135deg, #2c3e50, #1a5276);
@@ -101,21 +101,209 @@ header button svg {
   justify-content: center;
 }
 
+/* About Section - Estilo melhorado */
+.about-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.05), rgba(52, 152, 219, 0.05));
+  z-index: 0;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.about-content {
+  max-width: 600px;
+}
+
+.about-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  border-radius: 2px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.about-image {
+  position: relative;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.02);
+}
+
+.about-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Footer - Estilo melhorado */
+footer.bg-gray-900 {
+  background: linear-gradient(135deg, #1a2530, #2c3e50);
+  padding: 60px 0 30px;
+  color: white;
+  position: relative;
+}
+
+footer .container {
+  position: relative;
+  z-index: 1;
+}
+
+footer h3.text-lg {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+footer h3.text-lg::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #3498db;
+  border-radius: 1.5px;
+}
+
+footer .text-gray-400 {
+  color: #a0aec0;
+  transition: color 0.3s ease;
+}
+
+footer a.text-gray-400:hover {
+  color: white;
+  text-decoration: none;
+}
+
+footer ul.space-y-2 li {
+  transition: transform 0.2s ease;
+}
+
+footer ul.space-y-2 li:hover {
+  transform: translateX(5px);
+}
+
+footer input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+footer input:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  outline: none;
+}
+
+footer input::placeholder {
+  color: #a0aec0;
+}
+
+footer button[type="submit"] {
+  background-color: #3498db;
+  transition: all 0.3s ease;
+}
+
+footer button[type="submit"]:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+footer .flex.space-x-4 a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+footer .flex.space-x-4 a:hover {
+  background-color: #3498db;
+  transform: translateY(-3px);
+}
+
+footer .border-t {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+footer .text-gray-500 {
+  color: #718096;
+}
+
+/* Button Styles */
 .btn {
   padding: 12px 25px;
   border-radius: 5px;
   font-weight: 600;
   transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
 }
 
 .btn-primary {
-  background-color: white;
-  color: #2c3e50;
+  background-color: #3498db;
+  color: white;
 }
 
 .btn-primary:hover {
-  background-color: #f8f9fa;
-  transform: translateY(-2px);
+  background-color: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
 
 .btn-secondary {
@@ -126,7 +314,20 @@ header button svg {
 
 .btn-secondary:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.btn-outline:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.15);
 }
 
 /* Featured Publications */
@@ -189,31 +390,70 @@ header button svg {
   color: #3498db;
 }
 
-/* About Section */
-.about {
-  background-color: #f8f9fa;
+/* Book Card Styles */
+.book-image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
 }
 
-.about-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+.book-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.about-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #2c3e50;
+.star {
+  color: #ddd;
+  font-size: 1rem;
 }
 
-.about-text {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 30px;
+.star.filled {
+  color: #f59e0b;
+}
+
+.rating-value {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  margin-left: 5px;
+}
+
+.book-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+}
+
+.btn-small {
+  padding: 8px 15px;
+  font-size: 0.9rem;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    height: 300px;
+    order: -1;
+    margin-bottom: 20px;
+  }
+  
+  .about-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .about-buttons .btn {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
   .nav-links {
     gap: 15px;
   }
@@ -261,6 +501,18 @@ header button svg {
     padding: 40px 0;
   }
 
+  .about-section {
+    padding: 40px 0;
+  }
+  
+  .about-title {
+    font-size: 1.8rem;
+  }
+  
+  footer.bg-gray-900 {
+    padding: 40px 0 20px;
+  }
+  
   /* Botão de menu mobile */
   header button {
     background-color: rgba(255, 255, 255, 0.15);
@@ -329,165 +581,24 @@ header button svg {
   background-color: #f8f9fa;
 }
 
-/* About Section Component */
-.about-section {
-  padding: 60px 0;
-  background-color: white;
+/* Estilos específicos para o footer */
+footer address {
+  line-height: 1.8;
 }
 
-.about-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.about-content {
-  max-width: 600px;
-}
-
-.about-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
-
-.about-text {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 30px;
-}
-
-.about-image {
-  position: relative;
-  height: 400px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.about-image img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-/* Book Card Styles */
-.book-card {
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.book-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
-
-.book-image-container {
-  position: relative;
-  width: 100%;
-  height: 300px;
-}
-
-.book-image {
-  object-fit: cover;
-}
-
-.book-info {
-  padding: 20px;
-}
-
-.book-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #2c3e50;
-}
-
-.book-author {
-  font-size: 0.9rem;
-  color: #7f8c8d;
-  margin-bottom: 10px;
-}
-
-.book-rating {
+/* Estilos para o formulário de newsletter no footer */
+footer form.flex {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  max-width: 100%;
 }
 
-.star {
-  color: #ddd;
-  font-size: 1rem;
+footer form.flex input {
+  border-radius: 4px 0 0 4px;
+  padding: 10px 15px;
+  width: 100%;
 }
 
-.star.filled {
-  color: #f59e0b;
-}
-
-.rating-value {
-  font-size: 0.8rem;
-  color: #7f8c8d;
-  margin-left: 5px;
-}
-
-.book-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  border-top: 1px solid #eee;
-}
-
-.book-price {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #3498db;
-}
-
-/* Button Styles */
-.btn {
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: all 0.3s;
-  cursor: pointer;
-  border: none;
-}
-
-.btn-primary {
-  background-color: #3498db;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #2980b9;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: #3498db;
-  border: 2px solid #3498db;
-}
-
-.btn-outline:hover {
-  background-color: rgba(52, 152, 219, 0.1);
-}
-
-.btn-small {
-  padding: 8px 15px;
-  font-size: 0.9rem;
+footer form.flex button {
+  border-radius: 0 4px 4px 0;
+  white-space: nowrap;
 }

@@ -6,7 +6,7 @@ const featuredBooks = [
     title: "Algoritmos: Teoria e Prática",
     author: "Cormen et al.",
     price: "R$ 120,00",
-    image: "/images/books/algoritmos.jpg",
+    image: "/images/algoritmos.jpg",
     rating: 4.8
   },
   {
@@ -14,7 +14,7 @@ const featuredBooks = [
     title: "Redes de Computadores",
     author: "Andrew Tanenbaum",
     price: "R$ 35,00",
-    image: "/images/books/redes.jpg",
+    image: "/images/redes.png",
     rating: 4.5
   },
   {
@@ -22,7 +22,7 @@ const featuredBooks = [
     title: "Engenharia de Software",
     author: "Pressman",
     price: "R$ 110,00",
-    image: "/images/books/engenharia.jpg",
+    image: "/images/engenharia.png",
     rating: 4.7
   },
   {
@@ -30,7 +30,7 @@ const featuredBooks = [
     title: "Inteligência Artificial",
     author: "Stuart Russell",
     price: "R$ 130,00",
-    image: "/images/books/ia.jpg",
+    image: "/images/ia.jpeg",
     rating: 4.9
   },
   {
@@ -38,7 +38,7 @@ const featuredBooks = [
     title: "Estruturas de Dados",
     author: "Tenenbaum et al.",
     price: "R$ 85,00",
-    image: "/images/books/estruturas.jpg",
+    image: "/images/estruturas.jpg",
     rating: 4.6
   }
 ];
