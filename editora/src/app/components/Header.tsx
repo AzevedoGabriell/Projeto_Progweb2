@@ -6,15 +6,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between py-4">
-          {/* <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image 
-              src="/assets/images/logo-compselects.png" 
+              src="/images/logo.png" 
               alt="Compselects Logo" 
               width={180}
-              height={60}
+              height={180}
               priority
             />
-          </Link> */}
+          </Link>
 
           <div className="hidden md:flex space-x-8">
             <NavLink href="/">Home</NavLink>
