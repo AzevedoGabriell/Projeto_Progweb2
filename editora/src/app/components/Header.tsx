@@ -18,7 +18,7 @@ export default function Header() {
 
           <div className="hidden md:flex space-x-8">
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/sobre-nos">Sobre Nós</NavLink>
+            <NavLink href="/sobre">Sobre Nós</NavLink>
             <NavLink href="/publicacoes">Publicações</NavLink>
             <NavLink href="/autores">Autores</NavLink>
             <NavLink href="/submissoes">Submissões</NavLink>

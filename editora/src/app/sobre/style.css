@@ -1,0 +1,404 @@
+/* Estilos para a página Sobre Nós */
+
+.sobre-nos-page {
+  background-color: #ffffff;
+}
+
+/* Hero Section */
+.sobre-hero {
+  background: linear-gradient(135deg, #2c3e50, #1a5276);
+  color: white;
+  padding: 100px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(26, 82, 118, 0.7), rgba(44, 62, 80, 0.7));
+  z-index: 1;
+}
+
+.sobre-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sobre-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Section comuns */
+.sobre-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.sobre-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sobre-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.sobre-section-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.sobre-subsection-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.sobre-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* História e Missão */
+.sobre-historia-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.sobre-historia-content {
+  max-width: 100%;
+}
+
+.sobre-historia-image {
+  position: relative;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.sobre-historia-image:hover {
+  transform: scale(1.02);
+}
+
+.sobre-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.sobre-valores-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.sobre-valores-list li {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.sobre-valores-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #f1f5f9;
+}
+
+.valor-titulo {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Equipe */
+.sobre-team-section {
+  background-color: #f8f9fa;
+}
+
+.sobre-team-intro {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+}
+
+.sobre-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.sobre-team-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.sobre-team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.sobre-team-image-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.sobre-team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sobre-team-card:hover .sobre-team-image {
+  transform: scale(1.05);
+}
+
+.sobre-team-info {
+  padding: 25px;
+}
+
+.sobre-team-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.sobre-team-role {
+  font-size: 1rem;
+  color: #3498db;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.sobre-team-bio {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Parceiros */
+.sobre-partners-section {
+  background-color: #fff;
+}
+
+.sobre-partners-intro {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+}
+
+.sobre-partners-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+}
+
+.sobre-partners-category {
+  margin-bottom: 20px;
+}
+
+.sobre-partners-category h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sobre-partners-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.sobre-partner-logo {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sobre-partner-logo:hover {
+  transform: translateY(-5px);
+}
+
+.sobre-partner-logo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sobre-partner-logo p {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* CTA Section */
+.sobre-cta-section {
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+}
+
+.sobre-cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.sobre-cta-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-cta-text {
+  font-size: 1.15rem;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.sobre-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .sobre-historia-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-historia-image {
+    height: 400px;
+    margin-top: 40px;
+  }
+
+  .sobre-team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .sobre-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .sobre-section {
+    padding: 60px 0;
+  }
+
+  .sobre-section-title {
+    font-size: 2rem;
+  }
+
+  .sobre-team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
+  .sobre-partners-logos {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .sobre-cta-title {
+    font-size: 1.9rem;
+  }
+
+  .sobre-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre-cta-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sobre-hero {
+    padding: 80px 0 60px;
+  }
+
+  .sobre-hero-title {
+    font-size: 2rem;
+  }
+
+  .sobre-section {
+    padding: 40px 0;
+  }
+
+  .sobre-section-title {
+    font-size: 1.75rem;
+  }
+
+  .sobre-team-card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .sobre-subsection-title {
+    font-size: 1.5rem;
+  }
+
+  .sobre-text {
+    font-size: 1rem;
+  }
+}
