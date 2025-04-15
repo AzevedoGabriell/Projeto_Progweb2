@@ -24,7 +24,7 @@ const SAMPLE_PUBLICATIONS: Publication[] = [
     id: "1",
     title: "Computação e Sociedade na Era Digital",
     author: "Ana Silva e João Costa",
-    coverImage: "/images/publications/computacao-sociedade.jpg",
+    coverImage: "/images/comp.jpeg",
     price: "R$ 79,90",
     type: "livro",
     category: "Tecnologia",
@@ -37,7 +37,7 @@ const SAMPLE_PUBLICATIONS: Publication[] = [
     id: "2",
     title: "Inteligência Artificial: Fundamentos e Aplicações",
     author: "Carlos Mendes",
-    coverImage: "/images/publications/ia-fundamentos.jpg",
+    coverImage: "/images/ia.jpeg",
     price: "R$ 89,90",
     type: "livro",
     category: "Inteligência Artificial",
@@ -50,7 +50,7 @@ const SAMPLE_PUBLICATIONS: Publication[] = [
     id: "3",
     title: "Revista Brasileira de Computação Aplicada - Vol. 15",
     author: "Vários autores",
-    coverImage: "/images/publications/revista-computacao.jpg",
+    coverImage: "/images/apl.jpeg",
     price: "R$ 45,00",
     type: "periodico",
     category: "Ciência da Computação",
@@ -63,7 +63,7 @@ const SAMPLE_PUBLICATIONS: Publication[] = [
     id: "4",
     title: "Blockchain e Economia Digital",
     author: "Paulo Ribeiro e Mariana Costa",
-    coverImage: "/images/publications/blockchain.jpg",
+    coverImage: "/images/blo.webp",
     price: "R$ 69,90",
     type: "ebook",
     category: "Tecnologia",
@@ -76,7 +76,7 @@ const SAMPLE_PUBLICATIONS: Publication[] = [
     id: "5",
     title: "Segurança em Sistemas Distribuídos",
     author: "Luiz Fernandes",
-    coverImage: "/images/publications/seguranca-sistemas.jpg",
+    coverImage: "/images/seg.jpeg",
     price: "R$ 110,00",
     type: "livro",
     category: "Segurança",
@@ -89,7 +89,7 @@ const SAMPLE_PUBLICATIONS: Publication[] = [
     id: "6",
     title: "Computação Quântica: Desafios e Perspectivas",
     author: "Roberto Almeida",
-    coverImage: "/images/publications/computacao-quantica.jpg",
+    coverImage: "/images/qua.jpeg",
     price: "R$ 95,50",
     type: "livro",
     category: "Computação Quântica",
@@ -298,9 +298,6 @@ export default function Publicacoes() {
                 {filteredPublications.map((publication) => (
                   <div key={publication.id} className="book-card">
                     <div className="book-image-container">
-                      <div className="publication-type-badge">
-                        {publication.type}
-                      </div>
                       <div className="book-image">
                         <Image
                           src={

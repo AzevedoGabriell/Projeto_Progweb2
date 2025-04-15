@@ -26,7 +26,7 @@ export default function AutoresPage() {
             <div className="autor-card">
               <div className="autor-image-container">
                 <Image
-                  src="/images/autores/autor1.jpg"
+                  src="/images/dir.jpg"
                   alt="Prof. Carlos Silva"
                   width={300}
                   height={300}
@@ -57,7 +57,7 @@ export default function AutoresPage() {
             <div className="autor-card">
               <div className="autor-image-container">
                 <Image
-                  src="/images/autores/autor2.jpg"
+                  src="/images/coor.jpg"
                   alt="Dra. Ana Oliveira"
                   width={300}
                   height={300}
@@ -88,7 +88,7 @@ export default function AutoresPage() {
             <div className="autor-card">
               <div className="autor-image-container">
                 <Image
-                  src="/images/autores/autor3.jpg"
+                  src="/images/rev.jpg"
                   alt="Prof. Ricardo Mendes"
                   width={300}
                   height={300}
@@ -121,7 +121,7 @@ export default function AutoresPage() {
             <div className="autor-card">
               <div className="autor-image-container">
                 <Image
-                  src="/images/autores/autor4.jpg"
+                  src="/images/chefe.png"
                   alt="Dra. Juliana Costa"
                   width={300}
                   height={300}
@@ -154,7 +154,7 @@ export default function AutoresPage() {
             <div className="autor-card">
               <div className="autor-image-container">
                 <Image
-                  src="/images/autores/autor5.jpg"
+                  src="/images/pp.png"
                   alt="Prof. Eduardo Santos"
                   width={300}
                   height={300}
@@ -187,7 +187,7 @@ export default function AutoresPage() {
             <div className="autor-card">
               <div className="autor-image-container">
                 <Image
-                  src="/images/autores/autor6.jpg"
+                  src="/images/dd.jpg"
                   alt="Dra. Fernanda Lima"
                   width={300}
                   height={300}

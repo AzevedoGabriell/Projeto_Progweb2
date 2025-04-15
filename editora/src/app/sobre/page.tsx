@@ -91,7 +91,7 @@ export default function SobreNos() {
             </div>
             <div className="sobre-historia-image">
               <Image
-                src="/api/placeholder/500/700"
+                src="/images/hist2.webp"
                 alt="História da CompSelects"
                 width={500}
                 height={700}
@@ -120,7 +120,7 @@ export default function SobreNos() {
             <div className="sobre-team-card">
               <div className="sobre-team-image-container">
                 <Image
-                  src="/api/placeholder/300/300"
+                  src="/images/chefe.png"
                   alt="Dra. Ana Mendes"
                   width={300}
                   height={300}
@@ -142,7 +142,7 @@ export default function SobreNos() {
             <div className="sobre-team-card">
               <div className="sobre-team-image-container">
                 <Image
-                  src="/api/placeholder/300/300"
+                  src="/images/dir.jpg"
                   alt="Prof. Ricardo Silva"
                   width={300}
                   height={300}
@@ -163,7 +163,7 @@ export default function SobreNos() {
             <div className="sobre-team-card">
               <div className="sobre-team-image-container">
                 <Image
-                  src="/api/placeholder/300/300"
+                  src="/images/coor.jpg"
                   alt="Carla Torres"
                   width={300}
                   height={300}
@@ -184,7 +184,7 @@ export default function SobreNos() {
             <div className="sobre-team-card">
               <div className="sobre-team-image-container">
                 <Image
-                  src="/api/placeholder/300/300"
+                  src="/images/pp.png"
                   alt="Paulo Martins"
                   width={300}
                   height={300}
@@ -206,7 +206,7 @@ export default function SobreNos() {
             <div className="sobre-team-card">
               <div className="sobre-team-image-container">
                 <Image
-                  src="/api/placeholder/300/300"
+                  src="/images/dd.jpg"
                   alt="Laura Costa"
                   width={300}
                   height={300}
@@ -228,7 +228,7 @@ export default function SobreNos() {
             <div className="sobre-team-card">
               <div className="sobre-team-image-container">
                 <Image
-                  src="/api/placeholder/300/300"
+                  src="/images/rev.jpg"
                   alt="Dr. Fernando Gomes"
                   width={300}
                   height={300}
@@ -268,7 +268,7 @@ export default function SobreNos() {
               <div className="sobre-partners-logos">
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/usp.webp"
                     alt="USP"
                     width={180}
                     height={100}
@@ -277,7 +277,7 @@ export default function SobreNos() {
                 </div>
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/unicamp.png"
                     alt="UNICAMP"
                     width={180}
                     height={100}
@@ -286,7 +286,7 @@ export default function SobreNos() {
                 </div>
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/ufrj.png"
                     alt="UFRJ"
                     width={180}
                     height={100}
@@ -295,7 +295,7 @@ export default function SobreNos() {
                 </div>
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/puc.png"
                     alt="PUC-Rio"
                     width={180}
                     height={100}
@@ -311,7 +311,7 @@ export default function SobreNos() {
               <div className="sobre-partners-logos">
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/tec.jpeg"
                     alt="TechBrasil"
                     width={180}
                     height={100}
@@ -320,7 +320,7 @@ export default function SobreNos() {
                 </div>
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/inov.jpeg"
                     alt="Instituto Inovação"
                     width={180}
                     height={100}
@@ -329,7 +329,7 @@ export default function SobreNos() {
                 </div>
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/dat.jpeg"
                     alt="DataOne"
                     width={180}
                     height={100}
@@ -338,7 +338,7 @@ export default function SobreNos() {
                 </div>
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/sof.png"
                     alt="SoftLabs"
                     width={180}
                     height={100}
@@ -356,7 +356,7 @@ export default function SobreNos() {
               <div className="sobre-partners-logos">
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/sbc.png"
                     alt="SBC"
                     width={180}
                     height={100}
@@ -365,7 +365,7 @@ export default function SobreNos() {
                 </div>
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/ab.jpeg"
                     alt="ABES"
                     width={180}
                     height={100}
@@ -374,7 +374,7 @@ export default function SobreNos() {
                 </div>
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/cb.png"
                     alt="CBL"
                     width={180}
                     height={100}
@@ -383,7 +383,7 @@ export default function SobreNos() {
                 </div>
                 <div className="sobre-partner-logo">
                   <Image
-                    src="/api/placeholder/180/100"
+                    src="/images/fab.png"
                     alt="FAPESP"
                     width={180}
                     height={100}
