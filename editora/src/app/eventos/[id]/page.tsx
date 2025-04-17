@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 const eventos = [
@@ -152,18 +151,37 @@ const eventos = [
   }
 ];
 
-export default function EventoDetalhePage({ params }: { params: { id: string } }) {
-  const evento = eventos.find(e => e.id === params.id);
-  
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default function EventoDetalhePage({ params }: PageProps) {
+  const evento = eventos.find((e) => e.id === params.id);
+
   if (!evento) {
     notFound();
   }
 
   return (
     <main className="container mx-auto px-4 py-8">
-      <Link href="/eventos" className="text-blue-600 hover:text-blue-800 flex items-center mb-6">
-        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+      <Link
+        href="/eventos"
+        className="text-blue-600 hover:text-blue-800 flex items-center mb-6"
+      >
+        <svg
+          className="w-4 h-4 mr-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
         </svg>
         Voltar para Eventos
       </Link>
@@ -172,61 +190,129 @@ export default function EventoDetalhePage({ params }: { params: { id: string } }
         <div className="relative h-64 w-full bg-gray-200 flex items-center justify-center">
           <span className="text-gray-500">Imagem do evento</span>
         </div>
-        
+
         <div className="p-8">
-          <h1 className="text-3xl font-bold mb-4 text-gray-800">{evento.titulo}</h1>
-          
+          <h1 className="text-3xl font-bold mb-4 text-gray-800">
+            {evento.titulo}
+          </h1>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div>
-              <h2 className="text-xl font-semibold mb-3 text-blue-700">Informações</h2>
+              <h2 className="text-xl font-semibold mb-3 text-blue-700">
+                Informações
+              </h2>
               <ul className="space-y-2">
                 <li className="flex">
-                  <svg className="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  <svg
+                    className="w-5 h-5 mr-2 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
                   </svg>
-                  <span><strong>Data:</strong> {evento.data}</span>
+                  <span>
+                    <strong>Data:</strong> {evento.data}
+                  </span>
                 </li>
                 <li className="flex">
-                  <svg className="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-5 h-5 mr-2 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
-                  <span><strong>Horário:</strong> {evento.horario}</span>
+                  <span>
+                    <strong>Horário:</strong> {evento.horario}
+                  </span>
                 </li>
                 <li className="flex">
-                  <svg className="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <svg
+                    className="w-5 h-5 mr-2 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
                   </svg>
-                  <span><strong>Local:</strong> {evento.local}</span>
+                  <span>
+                    <strong>Local:</strong> {evento.local}
+                  </span>
                 </li>
                 {evento.endereco && (
                   <li className="flex">
-                    <svg className="w-5 h-5 mr-2 text-blue-600 opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <svg
+                      className="w-5 h-5 mr-2 text-blue-600 opacity-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
                     </svg>
                     <span>{evento.endereco}</span>
                   </li>
                 )}
               </ul>
             </div>
-            
+
             <div>
-              <h2 className="text-xl font-semibold mb-3 text-blue-700">Inscrição</h2>
+              <h2 className="text-xl font-semibold mb-3 text-blue-700">
+                Inscrição
+              </h2>
               <div className="bg-blue-50 p-4 rounded-lg">
-                <p className="mb-2"><strong>Necessária:</strong> {evento.inscricao.necessaria ? 'Sim' : 'Não'}</p>
-                <p className="mb-2"><strong>Valor:</strong> {evento.inscricao.taxa}</p>
+                <p className="mb-2">
+                  <strong>Necessária:</strong>{" "}
+                  {evento.inscricao.necessaria ? "Sim" : "Não"}
+                </p>
+                <p className="mb-2">
+                  <strong>Valor:</strong> {evento.inscricao.taxa}
+                </p>
                 {evento.inscricao.vagas && (
-                  <p className="mb-2"><strong>Vagas limitadas:</strong> {evento.inscricao.vagas}</p>
+                  <p className="mb-2">
+                    <strong>Vagas limitadas:</strong> {evento.inscricao.vagas}
+                  </p>
                 )}
                 {evento.inscricao.inclui && (
-                  <p className="mb-2"><strong>Inclui:</strong> {evento.inscricao.inclui}</p>
+                  <p className="mb-2">
+                    <strong>Inclui:</strong> {evento.inscricao.inclui}
+                  </p>
                 )}
                 {evento.inscricao.observacao && (
-                  <p className="mb-2"><strong>Observação:</strong> {evento.inscricao.observacao}</p>
+                  <p className="mb-2">
+                    <strong>Observação:</strong> {evento.inscricao.observacao}
+                  </p>
                 )}
                 {evento.inscricao.necessaria && (
-                  <a 
-                    href={evento.inscricao.link} 
+                  <a
+                    href={evento.inscricao.link}
                     className="mt-3 inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition-colors"
                   >
                     Inscrever-se
@@ -235,125 +321,168 @@ export default function EventoDetalhePage({ params }: { params: { id: string } }
               </div>
             </div>
           </div>
-          
+
           <div className="mb-8">
-            <h2 className="text-xl font-semibold mb-3 text-blue-700">Sobre o Evento</h2>
+            <h2 className="text-xl font-semibold mb-3 text-blue-700">
+              Sobre o Evento
+            </h2>
             <p className="text-gray-700 leading-relaxed">{evento.descricao}</p>
           </div>
-          
+
           {(evento.autor || evento.palestrantes || evento.facilitador) && (
             <div className="mb-8">
               <h2 className="text-xl font-semibold mb-3 text-blue-700">
-                {evento.autor ? 'Autor' : evento.facilitador ? 'Facilitador' : 'Palestrantes'}
+                {evento.autor
+                  ? "Autor"
+                  : evento.facilitador
+                  ? "Facilitador"
+                  : "Palestrantes"}
               </h2>
-              
+
               {evento.autor && (
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-lg mb-1">{evento.autor}</h3>
-                  {evento.biografia && <p className="text-gray-700">{evento.biografia}</p>}
-                </div>
-              )}
-              
-              {evento.facilitador && (
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="font-semibold text-lg mb-1">{evento.facilitador}</h3>
-                  {evento.biografia && <p className="text-gray-700">{evento.biografia}</p>}
-                </div>
-              )}
-              
-              {evento.palestrantes && Array.isArray(evento.palestrantes) && evento.palestrantes.map((palestrante, index) => (
-                <div key={index} className="bg-gray-50 p-4 rounded-lg mb-3 last:mb-0">
-                  <h3 className="font-semibold text-lg mb-1">
-                    {typeof palestrante === 'string' ? palestrante : palestrante.nome}
-                  </h3>
-                  {typeof palestrante !== 'string' && (
-                    <>
-                      {palestrante.instituicao && (
-                        <p className="text-gray-600 mb-1">{palestrante.instituicao}</p>
-                      )}
-                      {palestrante.bio && (
-                        <p className="text-gray-700">{palestrante.bio}</p>
-                      )}
-                    </>
+                  {evento.biografia && (
+                    <p className="text-gray-700">{evento.biografia}</p>
                   )}
                 </div>
-              ))}
+              )}
+
+              {evento.facilitador && (
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-lg mb-1">
+                    {evento.facilitador}
+                  </h3>
+                  {evento.biografia && (
+                    <p className="text-gray-700">{evento.biografia}</p>
+                  )}
+                </div>
+              )}
+
+              {evento.palestrantes &&
+                Array.isArray(evento.palestrantes) &&
+                evento.palestrantes.map((palestrante, index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-50 p-4 rounded-lg mb-3 last:mb-0"
+                  >
+                    <h3 className="font-semibold text-lg mb-1">
+                      {typeof palestrante === "string"
+                        ? palestrante
+                        : palestrante.nome}
+                    </h3>
+                    {typeof palestrante !== "string" && (
+                      <>
+                        {palestrante.instituicao && (
+                          <p className="text-gray-600 mb-1">
+                            {palestrante.instituicao}
+                          </p>
+                        )}
+                        {palestrante.bio && (
+                          <p className="text-gray-700">{palestrante.bio}</p>
+                        )}
+                      </>
+                    )}
+                  </div>
+                ))}
             </div>
           )}
-          
+
           {evento.agenda && (
-  <div className="mb-8">
-    <h2 className="text-xl font-semibold mb-3 text-blue-700">Programação</h2>
-    
-    {/* Verificamos se é uma programação por dias (verificando se o primeiro item tem 'atividades') */}
-    {evento.agenda[0] && 'atividades' in evento.agenda[0] ? (
-      // Programação por dias (como na feira)
-      <div className="space-y-6">
-        {evento.agenda.map((dia, index) => {
-          // Garantindo o tipo correto
-          if ('dia' in dia && 'atividades' in dia) {
-            return (
-              <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-lg mb-3">{dia.dia}</h3>
-                <table className="w-full">
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold mb-3 text-blue-700">
+                Programação
+              </h2>
+
+              {/* Verificamos se é uma programação por dias (verificando se o primeiro item tem 'atividades') */}
+              {evento.agenda[0] && "atividades" in evento.agenda[0] ? (
+                // Programação por dias (como na feira)
+                <div className="space-y-6">
+                  {evento.agenda.map((dia, index) => {
+                    // Garantindo o tipo correto
+                    if ("dia" in dia && "atividades" in dia) {
+                      return (
+                        <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                          <h3 className="font-semibold text-lg mb-3">
+                            {dia.dia}
+                          </h3>
+                          <table className="w-full">
+                            <tbody>
+                              {dia.atividades.map((item, idx) => (
+                                <tr
+                                  key={idx}
+                                  className={idx % 2 === 0 ? "bg-gray-100" : ""}
+                                >
+                                  <td className="py-2 px-3 font-medium w-24">
+                                    {item.horario}
+                                  </td>
+                                  <td className="py-2 px-3">
+                                    {item.atividade}
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      );
+                    }
+                    return null;
+                  })}
+                </div>
+              ) : (
+                // Programação simples (um dia só)
+                <table className="w-full bg-gray-50 rounded-lg overflow-hidden">
                   <tbody>
-                    {dia.atividades.map((item, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-gray-100' : ''}>
-                        <td className="py-2 px-3 font-medium w-24">{item.horario}</td>
-                        <td className="py-2 px-3">{item.atividade}</td>
-                      </tr>
-                    ))}
+                    {evento.agenda.map((item, index) => {
+                      // Garantindo o tipo correto
+                      if ("horario" in item && "atividade" in item) {
+                        return (
+                          <tr
+                            key={index}
+                            className={index % 2 === 0 ? "bg-gray-100" : ""}
+                          >
+                            <td className="py-3 px-4 font-medium w-32 border-b border-gray-200">
+                              {item.horario}
+                            </td>
+                            <td className="py-3 px-4 border-b border-gray-200">
+                              {item.atividade}
+                            </td>
+                          </tr>
+                        );
+                      }
+                      return null;
+                    })}
                   </tbody>
                 </table>
-              </div>
-            );
-          }
-          return null;
-        })}
-      </div>
-    ) : (
-      // Programação simples (um dia só)
-      <table className="w-full bg-gray-50 rounded-lg overflow-hidden">
-        <tbody>
-          {evento.agenda.map((item, index) => {
-            // Garantindo o tipo correto
-            if ('horario' in item && 'atividade' in item) {
-              return (
-                <tr key={index} className={index % 2 === 0 ? 'bg-gray-100' : ''}>
-                  <td className="py-3 px-4 font-medium w-32 border-b border-gray-200">{item.horario}</td>
-                  <td className="py-3 px-4 border-b border-gray-200">{item.atividade}</td>
-                </tr>
-              );
-            }
-            return null;
-          })}
-        </tbody>
-      </table>
-    )}
-  </div>
-)}
-          
+              )}
+            </div>
+          )}
+
           {evento.destaques && (
             <div className="mb-8">
-              <h2 className="text-xl font-semibold mb-3 text-blue-700">Destaques</h2>
+              <h2 className="text-xl font-semibold mb-3 text-blue-700">
+                Destaques
+              </h2>
               <ul className="list-disc pl-5 space-y-1">
                 {evento.destaques.map((destaque, index) => (
-                  <li key={index} className="text-gray-700">{destaque}</li>
+                  <li key={index} className="text-gray-700">
+                    {destaque}
+                  </li>
                 ))}
               </ul>
             </div>
           )}
-          
+
           <div className="mt-8 flex justify-center">
-            <Link 
+            <Link
               href="/eventos"
               className="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-6 rounded-md transition-colors mx-2"
             >
               Voltar para Eventos
             </Link>
-            
+
             {evento.inscricao.necessaria && (
-              <a 
+              <a
                 href={evento.inscricao.link}
                 className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-colors mx-2"
               >
